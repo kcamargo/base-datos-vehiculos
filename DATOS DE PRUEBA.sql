@@ -218,6 +218,7 @@ INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('VV', 
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('YH', 'Yamaha', 'Iwata, Shizuoka, Japón', 'info@yamaha.com', 9002);	
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('HN', 'Harley-Davidson', 'Milwaukee, WI, Estados Unidos','info@harleydavidson.com', 11233);
 
+--Plantas
 INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(125483,'VK','Planta Volkswagen','Algo algo algo',	62,'planta@volkswagen.com');
 INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(899871,'BM','Planta BMW','Algo algo algo', 62,'planta@bmw.com');
 INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(343687,'CH', 'Planta Chevrolet','Algo algo algo',21,'planta@chevrolet.com');
@@ -232,3 +233,12 @@ INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUE
 INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(842567,'RT','Planta Renault','Algo algo algo',23,'planta@renault.com');
 INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(645273,'SK','Planta Suzuki','Algo algo algo',36,'planta@suzuki.com');
 INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(945472,'HN','Planta Harley-Davidson','Algo algo algo',21,'planta@harleydevidson.com');
+
+-- Vehiculos
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('3FAHP0HA7AR316241','FUSION','VERDE',1134,'SEDAN 2.5', 40,'FD');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1J4FA24158L541376','WRANGLER','AZUL',1530,'2DR SUV 3.8 V8',21,'JP');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1C6RR7GT1ES409326','RAM PICKUP', 'NEGRO', 2581,'4DR PICKUP 5.7 V8',21,'DD');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1GBJC34R1YF432082','CK3500', 'AZUL',2209,'COUPE 2-DR V-8 6.2L',21,'CH');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1G1YY25R695700001','CORVETTE','VIOLETA', 1511,'COUPE 2-DR V-8 6.2L',21,'CH');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1FDXE45S53HC05364','VAN','BLANCO',1696,'V-10 6.8L 6.8L V10',21,'FD');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1GNEK13ZX3R298984','Tahoe','AZUL',2419,'4WD 5.3L V8 OHV 16V FFV',21,'CH');

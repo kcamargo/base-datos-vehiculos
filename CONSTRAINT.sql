@@ -1,6 +1,8 @@
 
 /*VEHICULOS*/
-ALTER TABLE Vehiculos ADD CONSTRAINT ck_vin CHECK (vin in('i', 'o', 'q', 'ñ'));
+ALTER TABLE Vehiculos ADD CONSTRAINT ck_vin CHECK (vin in('a','b','c','d','e','f','g','h','j','k','l','m','n','p','r','s','t','u','v','w','x','y','z'));
+ALTER TABLE Vehiculos DROP CONSTRAINT ck_vin
+ALTER TABLE Vehiculos ADD CONSTRAINT ck_vin CHECK (CHARINDEX('i',vin) > 0 or CHARINDEX('O', vin) > 0 or CHARINDEX('Q',vin) > 0 or CHARINDEX('ñ',vin) > 0)
 -- No se si está bien ALTER TABLE Vehiculos DROP COLUMN codPais; 
 -- No se si está bien ALTER TABLE Vehiculos DROP COLUMN codFab; 
 
