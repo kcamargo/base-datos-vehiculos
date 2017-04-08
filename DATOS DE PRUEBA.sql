@@ -170,13 +170,14 @@ INSERT INTO Paises VALUES(58, 'Ucrania');
 INSERT INTO Paises VALUES(59, 'Uganda');
 INSERT INTO Paises VALUES(60, 'Uruguay');
 INSERT INTO Paises VALUES(61, 'Venezuela');
+INSERT INTO Paises VALUES(62,'Alemania');
 
 --Fabricantes
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('VK','Volkswagen','Wolfsburgo, Alemania','info@volkswagen.com',3000);
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('AR','Alfa Romeo', 'Turín, Italia', 'info@alfaromeo.com', 5400);		
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('AM','Aston Martin','Gaydon, Warwickshire, Reino Unido','info@astonmartin.com', 2893);			
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('AS','Audi','Ingolstadt, Alemania', 'info@audi.com', 6245);			
-INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('BM','BMW','Múnich, Alemania','info@bmw.com', 7321);		
+INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('BM','BMW',	,'info@bmw.com', 7321);		
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('BQ','Bentley','Crewe, Reino Unido','info@bentley.com', 3097);			
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('BG','Bugatti', 'Molsheim, Alsacia, Francia', 'info@bugatti.com',1823);		
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('CH','Chevrolet','Detroit, MI, Estados Unidos','info@chevrolet.com', 10273);			
@@ -216,3 +217,18 @@ INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('TY','
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('VV', 'Volvo', 'Gotemburgo, Suecia', 'info@volvo.com', 5563);
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('YH', 'Yamaha', 'Iwata, Shizuoka, Japón', 'info@yamaha.com', 9002);	
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('HN', 'Harley-Davidson', 'Milwaukee, WI, Estados Unidos','info@harleydavidson.com', 11233);
+
+INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(125483,'VK','Planta Volkswagen','Algo algo algo',	62,'planta@volkswagen.com');
+INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(899871,'BM','Planta BMW','Algo algo algo', 62,'planta@bmw.com');
+INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(343687,'CH', 'Planta Chevrolet','Algo algo algo',21,'planta@chevrolet.com');
+INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(131894,'CI','Planta Citroen','Algo algo algo',23,'planta@citroen.com');
+INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(641245,'FI','Planta Fiat','Algo algo algo',34,'planta@fiat.com');
+INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(212318,'FD', 'Planta Ford','Algo algo algo',21,'planta@ford.com');
+INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(789456,'HD','Planta Honda','Algo algo algo',36,'planta@honda.com');
+INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(785825,'HY','Planta Hyundai','Algo algo algo',11,'planta@hyundai.com');
+INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(125434,'JP','Planta Jeep','Algo algo algo',21,'planta@jeep.com');
+INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(521565,'MB','Planta Mercedez Benz','Algo algo algo',62,'planta@mercedezbenz.com');
+INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(289734,'NS','Planta Nissan','Algo algo algo',36,'planta@nissan.com');
+INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(842567,'RT','Planta Renault','Algo algo algo',23,'planta@renault.com');
+INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(645273,'SK','Planta Suzuki','Algo algo algo',36,'planta@suzuki.com');
+INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUES(945472,'HN','Planta Harley-Davidson','Algo algo algo',21,'planta@harleydevidson.com');
