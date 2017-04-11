@@ -118,9 +118,8 @@ INSERT INTO Paises VALUES(6, 'Francia');
 INSERT INTO Paises VALUES(7, 'Mexico');
 INSERT INTO Paises VALUES(8, 'China');
 INSERT INTO Paises VALUES(9, 'Estados Unidos');
+INSERT INTO Paises VALUES('#', ' LOCAL');
 
-delete from Paises
-select * from Paises
 
 --Fabricantes
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('VK','Volkswagen','Wolfsburgo, Alemania','info@volkswagen.com',3000);
@@ -167,6 +166,7 @@ INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('TY','
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('VV', 'Volvo', 'Gotemburgo, Suecia', 'info@volvo.com', 5563);
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('YH', 'Yamaha', 'Iwata, Shizuoka, Japón', 'info@yamaha.com', 9002);	
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('HN', 'Harley-Davidson', 'Milwaukee, WI, Estados Unidos','info@harleydavidson.com', 11233);
+
 
 
 --Plantas
@@ -222,4 +222,3 @@ INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(20,000006,'1FDXE45S53
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(21,000007,'1GNEK13ZX3R298984',2419);
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(21,000007,'1GNEK13ZX3R298984',121);
 
-select * from Carga
