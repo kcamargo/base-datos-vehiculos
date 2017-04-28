@@ -167,6 +167,8 @@ INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('VV', 
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('YH', 'Yamaha', 'Iwata, Shizuoka, Japón', 'info@yamaha.com', 9002);	
 INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('HN', 'Harley-Davidson', 'Milwaukee, WI, Estados Unidos','info@harleydavidson.com', 11233);
 
+INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('CY', 'Chrysler', 'Michigan, Estados Unidos','info@chrysler.com', 4410);
+INSERT INTO Fabricantes (codFab, nomFab, dirFab, mailFab, emplFab) VALUES('MY', 'Mytsubishi', 'Minato, Tokyo, Tokio, Japón','info@mytsubishi.com', 22310);
 
 
 --Plantas
@@ -196,6 +198,22 @@ INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab
 INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1GNEK13ZX3R298984','Tahoe','AZUL',2419,'4WD 5.3L V8 OHV 16V FFV',9,'CH');
 
 
+
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('WAUFFBFL6BN024201','A4','AMARILLO',1395,'Passenger CarEngine: 2.0 L',2,'AS');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('2G1FC3D33C9165616','CAMARO','VERDE',1760,'Convertible 2D Engine: 3.6L V6 SIDI',9,'CH'); 
+
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('JHLRD77874C026456','CR-V','NARANJA',1494,'4-Wheel ABS',5,'HD'); 
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('3CBCFFB22CT105421','500','LILA',1796,'P245/45R20 Firestone Firehawk GTV	300S',9,'CY');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('JA3AW75K7SY828460','3000GT','VIOLETA',1740,'V6, 3.0L; DOHC 24V; MFI; Twin Turbo',5,'MY'); 
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('JTHBJ46G392283737','ES 350','ROSADO',1620,'SEDAN 4-DR',5,'LX');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('NM0GE9G75E1134136','v408','CELESTE',1564,'4/5-door panel van',9,'FD');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('WBACJ7107B6579762','E21','CREMA',1180,'Sedán 2 puertas',2,'BM');
+
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('WVWMA63B2WE307907','Passat','ROJO',1505,'SEDAN 4-DR',2,'VK');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('MALCU41U9EM166165','ACCENT','NEGRO',1560,'1.4 GL',4,'HY'); 
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('5TDXK3DC4B5093588','HYLUX','ROJO',1725,'DOHC, 16 válvulas',5,'TY');
+
+
 --Envios
 INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20030118',1191,7, 1);
 INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20060729', 1607,9, 1);
@@ -204,6 +222,22 @@ INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20100320', 231
 INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20120516',1587,9, 8);
 INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20150421',1781,9, 4);
 INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20170814',2540,9, 7);
+
+INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20150208',1465,2, 3);
+INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20151120',1848,9, 1);
+
+INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20160127',1569,5, 8);
+INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20160416',1884,9, 5);
+INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20160722',1827,5, 7);
+INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20160911',1701,5, 5);
+INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20161003',1642,9, 6);
+INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20161230',1239,2, 2);
+
+INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20170320',1580,2, 2);
+INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20170508',1638,4, 5);
+INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20171025',1811,5, 4);
+
+select * from Envios
 
 --Carga
 
@@ -221,4 +255,29 @@ INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(20,000006,'1FDXE45S53
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(20,000006,'1FDXE45S53HC05364',85);
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(21,000007,'1GNEK13ZX3R298984',2419);
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(21,000007,'1GNEK13ZX3R298984',121);
+
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(22,000008,'WAUFFBFL6BN024201',1395);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(22,000008,'WAUFFBFL6BN024201',70);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(23,000009,'2G1FC3D33C9165616',1760);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(23,000009,'2G1FC3D33C9165616',88);
+
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(24,000010,'JHLRD77874C026456',1494);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(24,000010,'JHLRD77874C026456',75);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(25,000011,'3CBCFFB22CT105421',1796);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(25,000011,'3CBCFFB22CT105421',88);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(26,000012,'JA3AW75K7SY828460',1740);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(26,000012,'JA3AW75K7SY828460',87);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(27,000013,'JTHBJ46G392283737',1620);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(27,000013,'JTHBJ46G392283737',81);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(28,000014,'NM0GE9G75E1134136',1564);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(28,000014,'NM0GE9G75E1134136',78);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(29,000015,'WBACJ7107B6579762',1180);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(29,000015,'WBACJ7107B6579762',59);
+
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(30,000016,'WVWMA63B2WE307907',1505);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(30,000016,'WVWMA63B2WE307907',75);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(31,000017,'MALCU41U9EM166165',1560);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(31,000017,'MALCU41U9EM166165',78);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(32,000018,'5TDXK3DC4B5093588',1725);
+INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(32,000018,'5TDXK3DC4B5093588',86);
 
