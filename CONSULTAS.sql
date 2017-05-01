@@ -1,5 +1,6 @@
 --a.	Mostrar el mayor peso, el menor peso, la mayor fecha y la menor fecha de los envíos de los años 2015 y 2016.
 
+--terminado funcionando
 SELECT MAX(E.pesoEnvio), MIN(e.pesoEnvio), MAX(e.fchEnvio), MIN(e.fchEnvio)
 FROM Envios e
 WHERE e.fchEnvio >= '20150101'
@@ -78,4 +79,30 @@ FROM
 WHERE
 
 
---i.	Obtener los datos de los fabricantes de Japón que en el 2016 hayan tenido en algún mes un envío de cantidad total superior a 100 vehículos y que también hayan tenido algún mes con una cantidad total inferior a 20.
+--i.	Obtener los datos de los fabricantes de Japón que en el 2016 
+--hayan tenido en algún mes un envío de cantidad total superior a 100 vehículos y 
+--que también hayan tenido algún mes con una cantidad total inferior a 20.
+
+
+select DATEPART(MM,e.fchEnvio) [Mes], c.vin
+from Envios e, Carga c
+where DATEPART(YYYY, e.fchEnvio) = '2016'
+and c.idEnvio = e.idEnvio
+group by DATEPART(MM,e.fchEnvio), c.vin
+having (count(distinct(c.vin)) > 100 or count(distinct(c.vin)) < 20)
+
+
+
+
+select distinct f.nomFab
+from Fabricantes f, Vehiculos v, Paises p, Envios e
+where f.codFab = v.codFab
+and v.codPais = p.codPais
+and p.nomPais = 'Japón'
+and DATEPART(YYYY, e.fchEnvio) = '2016'
+and exists ( select DATEPART(MM,e.fchEnvio) [Mes], c.vin
+			from Carga c
+			where c.idEnvio = e.idEnvio
+			group by DATEPART(MM,e.fchEnvio), c.vin
+			having (count(distinct(c.vin)) > 100 or count(distinct(c.vin)) < 20))
+
