@@ -230,6 +230,11 @@ INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20160729', 913
 INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20161001', 15717,6, 3);
 INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20170320', 1577,9, 9);
 
+delete from Envios 
+where Envios.idEnvio = 5
+
+
+INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20151008', 3808,4, 4);
 
 select * from Envios
 

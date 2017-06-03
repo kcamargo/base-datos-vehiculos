@@ -2,56 +2,55 @@
 --y valide el dígito verificador, si dicho dígito es correcto la función debe retornar el texto ‘OK’
 --, si es incorrecto, debe retornar todo el número de VIN pero incluyendo el dígito verificador correcto.
 
-CREATE FUNCTION EJ4A(@vin VARCHAR(17))
+CREATE FUNCTION EJ4A(@vin VARCHAR(17)) -- Funcionando
 RETURNS VARCHAR(17)
 AS
 BEGIN
-DECLARE @RETURN VARCHAR(17), @i INT, @char CHAR, @valor int, @multiplo int, @producto int, @suma int, @resto int
+DECLARE @RETURN VARCHAR(17), @i INT, @char CHAR, @valor int, @multiplo int, @producto int, @suma int, @resto int, @9 char(1)
+set @suma = 0;
 set @i = 1;
 
-while(@i < len(@vin) AND @i > 9 AND @i < 9)
+while(@i < len(@vin))
 BEGIN
  SET @char =  substring(@vin, @i, len(@vin))
-  IF(@char <> 9)
-  BEGIN
-  SET @valor = SELECT CAST(vnv.numero as int)  FROM [dbo].[valorNumericoVin] vnv WHERE vnv.letra = @char
-		SET @multiplo = SELECT fm.factor FROM [dbo].[factorMultipVin] fm where fm.posicion = @i
-			SET @producto = @valor * @multiplo
-				SET @suma = @suma + @producto
-					SET @i = @i+1
-  END
+  IF(@i = 9)
+	  BEGIN
+		SET @9 = @char
+		SET @i = @i+1
+	  END
+  ELSE
+	  BEGIN
+		  SET @valor = (SELECT CAST(v.numero as int) FROM valorNumericoVin v WHERE v.letra = @char)
+				SET @multiplo = (SELECT fm.factor FROM [dbo].[factorMultipVin] fm where fm.posicion = @i)
+					SET @producto = @valor * @multiplo
+						SET @suma = @suma + @producto
+							SET @i = @i+1
+	  END
 	
 END	
 
 SET @resto = @suma % 11
 
+IF (@resto = 10)
+	BEGIN
+		SET @vin = (SELECT STUFF(@vin,9,1,'X'))
+		SET @return = 'ok'
+	END
+ELSE IF (@9 = 'x')
+	BEGIN
+		SET @return = 'ok'
+	END
+ELSE
+	BEGIN
+		SET @vin = (SELECT STUFF(@vin,9,1,@resto))
+		SET @return = @vin
+	END
+
+RETURN @return
 
 END
 
-/*
-CREATE FUNCTION EJ4A(@vin VARCHAR(17))
-RETURNS VARCHAR(17)
-AS
-BEGIN
-DECLARE @RETURN VARCHAR(17), @i INT, @char CHAR, @valor int, @multiplo int, @producto int, @suma int, @resto int
-set @i = 1;
-
-while(@i < len(@vin) AND @i > 9 AND @i < 9)
-BEGIN
- SET @char =  substring(@vin, @i, len(@vin))
-	SET @valor = SELECT CAST(vnv.numero as int)  FROM [dbo].[valorNumericoVin] vnv WHERE vnv.letra = @char
-		SET @multiplo = SELECT fm.factor FROM [dbo].[factorMultipVin] fm where fm.posicion = @i
-			SET @producto = @valor * @multiplo
-				SET @suma = @suma + @producto
-					SET @i = @i+1
-END	
-
-SET @resto = @suma % 11
-
-
-END
-
-*/
+select [dbo].[EJ4A]('1M8GDM9AXKP042788')
 
 
 ---------------------------------------------------------------------
@@ -164,6 +163,7 @@ and p.codPais = @pais
 RETURN @nombrePais
 END
 
+EXEC EJ4E '20080101','20171231'
 ------------------------------------------------------------------------
 /*
 f.	Realizar un procedimiento almacenado que reciba un código de fabricante 
