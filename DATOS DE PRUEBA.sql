@@ -1,5 +1,7 @@
 ﻿-- DATOS DE PRUEBA TABLAS AUXILIARES
-
+go
+USE BD_VEHICULOS
+go
 INSERT INTO anioVehiculo (letra, anio) VALUES 
 ('A', 1980),
 ('B', 1981),
@@ -61,6 +63,7 @@ INSERT INTO anioVehiculo (letra, anio) VALUES
 ('7', 2037),
 ('8', 2038),
 ('9', 2039)
+
 
 INSERT INTO valorNumericoVin (letra, numero) VALUES
 ('A', 1),
@@ -200,29 +203,31 @@ INSERT INTO Plantas (codPlan, codFab, nomPlan, dirPlan, codPais, mailPlan) VALUE
 
 -- Vehiculos
 INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('3FAHP0HA7AR316241','FUSION','VERDE',1134,'SEDAN 2.5', 7,'FD');
-INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1J4FA24158L541376','WRANGLER','AZUL',1530,'2DR SUV 3.8 V8',9,'JP');
-INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1C6RR7GT1ES409326','RAM PICKUP', 'NEGRO', 2581,'4DR PICKUP 5.7 V8',9,'DD');
-INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1GBJC34R1YF432082','CK3500', 'AZUL',2209,'COUPE 2-DR V-8 6.2L',9,'CH');
-INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1G1YY25R695700001','CORVETTE','VIOLETA', 1511,'COUPE 2-DR V-8 6.2L',9,'CH');
-INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1FDXE45S53HC05364','VAN','BLANCO',1696,'V-10 6.8L 6.8L V10',9,'FD');
-INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1GNEK13ZX3R298984','Tahoe','AZUL',2419,'4WD 5.3L V8 OHV 16V FFV',9,'CH');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1J4FA24158L541376','WRANGLER','AZUL',1530,'2DR SUV 3.8 V8',7,'JP');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1C6RR7GT1ES409326','RAM PICKUP', 'NEGRO', 2581,'4DR PICKUP 5.7 V8',7,'DD');
 
-
-
-INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('WAUFFBFL6BN024201','A4','AMARILLO',1395,'Passenger CarEngine: 2.0 L',2,'AS');
-INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('2G1FC3D33C9165616','CAMARO','VERDE',1760,'Convertible 2D Engine: 3.6L V6 SIDI',9,'CH'); 
-
-INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('JHLRD77874C026456','CR-V','NARANJA',1494,'4-Wheel ABS',5,'HD'); 
-INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('3CBCFFB22CT105421','500','LILA',1796,'P245/45R20 Firestone Firehawk GTV	300S',9,'CY');
-INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('JA3AW75K7SY828460','3000GT','VIOLETA',1740,'V6, 3.0L; DOHC 24V; MFI; Twin Turbo',5,'MY'); 
-INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('JTHBJ46G392283737','ES 350','ROSADO',1620,'SEDAN 4-DR',5,'LX');
-INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('NM0GE9G75E1134136','v408','CELESTE',1564,'4/5-door panel van',9,'FD');
-INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('WBACJ7107B6579762','E21','CREMA',1180,'Sedán 2 puertas',2,'BM');
-
-INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('WVWMA63B2WE307907','Passat','ROJO',1505,'SEDAN 4-DR',2,'VK');
-INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('MALCU41U9EM166165','ACCENT','NEGRO',1560,'1.4 GL',4,'HY'); 
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('MALCU41U9EM166165','ACCENT','NEGRO',1560,'1.4 GL',5,'HY'); 
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1GBJC34R1YF432082','CK3500', 'AZUL',2209,'COUPE 2-DR V-8 6.2L',5,'CH');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1G1YY25R695700001','CORVETTE','VIOLETA', 1511,'COUPE 2-DR V-8 6.2L',5,'CH');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1FDXE45S53HC05364','VAN','BLANCO',1696,'V-10 6.8L 6.8L V10',5,'FD');
 INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('5TDXK3DC4B5093588','HYLUX','ROJO',1725,'DOHC, 16 válvulas',5,'TY');
 
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1GNEK13ZX3R298984','Tahoe','AZUL',2419,'4WD 5.3L V8 OHV 16V FFV',6,'CH');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('WAUFFBFL6BN024201','A4','AMARILLO',1395,'Passenger CarEngine: 2.0 L',6,'AS');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('2G1FC3D33C9165616','CAMARO','VERDE',1760,'Convertible 2D Engine: 3.6L V6 SIDI',6,'CH'); 
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('JHLRD77874C026456','CR-V','NARANJA',1494,'4-Wheel ABS',6,'HD');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('3CBCFFB22CT105421','500','LILA',1796,'P245/45R20 Firestone Firehawk GTV	300S',6,'CY');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('JA3AW75K7SY828460','3000GT','VIOLETA',1740,'V6, 3.0L; DOHC 24V; MFI; Twin Turbo',6,'MY'); 
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('JTHBJ46G392283737','ES 350','ROSADO',1620,'SEDAN 4-DR',6,'LX');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('NM0GE9G75E1134136','v408','CELESTE',1564,'4/5-door panel van',6,'FD');
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('WBACJ7107B6579762','E21','CREMA',1180,'Sedán 2 puertas',6,'BM');
+
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('WVWMA63B2WE307907','Passat','ROJO',1505,'SEDAN 4-DR',9,'VK');
+
+
+
+--para prueba trigger
+INSERT INTO Vehiculos(vin, modelo, color, peso, caracteristicas, codPais, codFab) VALUES('1M8GDM9AXKP042788', 'New Beatle','Perla',1500,'alguna descripcion prueba',2,'VK')
 
 --Envios
 INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20150118',5508,7, 1);
@@ -230,13 +235,9 @@ INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20160729', 913
 INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20161001', 15717,6, 3);
 INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20170320', 1577,9, 9);
 
-delete from Envios 
-where Envios.idEnvio = 5
-
-
+--no tiene vehiculos es solo de prueba
 INSERT INTO Envios (fchEnvio,pesoEnvio,oriEnvio,desEnvio) VALUES('20151008', 3808,4, 4);
 
-select * from Envios
 
 --Carga
 
@@ -245,11 +246,13 @@ INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(1,000002,'1J4FA24158L
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(1,000003,'1C6RR7GT1ES409326',2710);
 
 
+
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(2,000004,'MALCU41U9EM166165',1638);
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(2,000005,'1GBJC34R1YF432082',2319);
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(2,000006,'1G1YY25R695700001',1587);
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(2,000007,'1FDXE45S53HC05364',1781);
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(2,000008,'5TDXK3DC4B5093588',1811);
+
 
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(3,000009,'1GNEK13ZX3R298984',2540);
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(3,000010,'WAUFFBFL6BN024201',1465);
@@ -260,6 +263,7 @@ INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(3,000014,'JA3AW75K7SY
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(3,000015,'JTHBJ46G392283737',1701);
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(3,000016,'NM0GE9G75E1134136',1642);
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(3,000017,'WBACJ7107B6579762',1239);
+
 
 INSERT INTO Carga (idEnvio, idCarga, vin,pesoCarga) VALUES(4,000018,'WVWMA63B2WE307907',1577);
 

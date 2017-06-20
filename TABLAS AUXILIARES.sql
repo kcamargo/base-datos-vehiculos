@@ -1,3 +1,6 @@
+go
+USE BD_VEHICULOS
+go
 CREATE TABLE anioVehiculo (
 	letra CHAR(1),
 	anio CHAR(4)

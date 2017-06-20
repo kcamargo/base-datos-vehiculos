@@ -10,7 +10,7 @@ DECLARE @RETURN VARCHAR(17), @i INT, @char CHAR, @valor int, @multiplo int, @pro
 set @suma = 0;
 set @i = 1;
 
-while(@i < len(@vin))
+while(@i <= len(@vin))
 BEGIN
  SET @char =  substring(@vin, @i, len(@vin))
   IF(@i = 9)
@@ -49,6 +49,8 @@ ELSE
 RETURN @return
 
 END
+
+DROP FUNCTION EJ4A
 
 select [dbo].[EJ4A]('1M8GDM9AXKP042788')
 
@@ -141,17 +143,24 @@ e.	Dado un rango de fechas, implementar una función que retorne el nombre del
 país al cual se le envió la menor cantidad de vehículos en dicho rango.
 */
 
-CREATE FUNCTION EJ4E(@inicio DATETIME, @fin DATETIME) 
-RETURNS INT
+CREATE FUNCTION EJ4E(@inicio DATETIME, @fin DATETIME) -- arreglar que cuando trae un pais que sea # no sabe que pais es
+RETURNS VARCHAR(20)
 AS
 BEGIN
-DECLARE @pais int, @nombrePais VARCHAR(20)
+DECLARE @pais CHAR(1), @nombrePais VARCHAR(20), @pais2 CHAR(1)
 
 select @pais = min(e.desEnvio)
 from Envios e
 where exists (select count(e.desEnvio)
 			  from Envios e
-              group by e.desEnvio)
+              group by e.desEnvio) 
+
+select * from Envios
+
+IF(@pais = '#')
+	BEGIN
+		SET @pais = @pais2
+	END
 
 select @nombrePais = p.nomPais
 from Envios e, Paises p
@@ -162,6 +171,8 @@ and p.codPais = @pais
 
 RETURN @nombrePais
 END
+
+DROP FUNCTION EJ4E 
 
 EXEC EJ4E '20080101','20171231'
 ------------------------------------------------------------------------

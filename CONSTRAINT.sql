@@ -1,4 +1,6 @@
-
+go
+USE BD_VEHICULOS
+go
 /*VEHICULOS*/
 ALTER TABLE Vehiculos ADD CONSTRAINT ck_vin CHECK (vin in('a','b','c','d','e','f','g','h','j','k','l','m','n','p','r','s','t','u','v','w','x','y','z'));
 ALTER TABLE Vehiculos DROP CONSTRAINT ck_vin
